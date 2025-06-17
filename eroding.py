@@ -7,7 +7,7 @@ while True:
     blur = cv.GaussianBlur(frame,(7,7),cv.BORDER_DEFAULT)
     canny = cv.Canny(blur,125,150)
     dilated = cv.dilate(canny, (7,7), iterations= 3)
-    eroded = cv.erode(dilated,(3,3,), iterations = 1)
+    eroded = cv.erode(dilated,(7,7,), iterations = 1)
 
     cv.imshow('cam footage',eroded)
 
